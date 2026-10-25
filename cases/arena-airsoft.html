@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arena Airsoft — case de UX/UI | Yara Fabricia</title>
+<meta name="description" content="Case de UX/UI design: Arena Airsoft, app de organização de partidas de airsoft, do problema à validação com usuários reais.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<div class="case-hero">
+  <div class="wrap">
+    <div class="nav" style="padding: 0 0 28px 0">
+      <a class="brand" href="../index.html" style="color:#fff">Yara Fabricia</a>
+      <a class="back" href="../index.html" style="color:#a3a3ad">&larr; Voltar ao portfólio</a>
+    </div>
+    <div class="badge">
+      <svg width="26" height="26" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" stroke-width="9"></circle>
+        <circle cx="50" cy="50" r="8" fill="currentColor"></circle>
+        <rect x="44" y="12" width="12" height="26" rx="4" fill="currentColor"></rect>
+        <rect x="44" y="62" width="12" height="26" rx="4" fill="currentColor"></rect>
+        <rect x="12" y="44" width="26" height="12" rx="4" fill="currentColor"></rect>
+        <rect x="62" y="44" width="26" height="12" rx="4" fill="currentColor"></rect>
+      </svg>
+    </div>
+    <div class="eyebrow">Case de UX/UI design</div>
+    <h1>Arena Airsoft — tirando a organização de partidas do meio de centenas de mensagens de WhatsApp</h1>
+    <p class="lede">Projeto de estudo guiado, do problema cru até um protótipo navegável validado com jogadores de airsoft reais, em duas rodadas de teste de usabilidade.</p>
+    <div class="case-meta">
+      <div><span>Papel</span><span>UX/UI Designer — pesquisa, arquitetura de informação, UI, teste de usabilidade</span></div>
+      <div><span>Duração</span><span>Set – out de 2026</span></div>
+      <div><span>Método</span><span>4 entrevistas de descoberta + 2 rodadas de teste, 5 participantes reais no total</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- 01 Contexto -->
+  <div class="case-section">
+    <div class="num">01 · Contexto</div>
+    <h2>O problema, antes de qualquer tela</h2>
+    <p>Hoje, quem joga ou organiza airsoft faz tudo pelo WhatsApp: divulgar uma partida, se inscrever, combinar pagamento, esclarecer regra, avisar mudança de horário. Tudo isso dividido entre vários grupos, misturado com conversa social, sem nenhum lugar fixo pra conferir a informação mais atual.</p>
+    <p>A primeira versão do problema que eu escrevi já continha uma solução escondida dentro — "centralizar tudo numa plataforma" é resposta, não problema. Reescrito sem isso: conforme a conversa de um grupo avança, informação relevante sobre uma partida se perde no meio do volume de mensagens, e quem chega depois — ou quem tenta entrar pela primeira vez — não tem como saber o que ainda vale.</p>
+    <div class="callout">
+      <span class="label">Por que isso importa pro processo</span>
+      Essa correção não foi cosmética. Até a frase do problema parar de citar "app", eu estava desenhando funcionalidade em vez de resolver dor — o mesmo risco voltou depois, em hipóteses e personas, e precisou ser corrigido de novo cada vez que reapareceu.
+    </div>
+  </div>
+
+  <!-- 02 Pesquisa -->
+  <div class="case-section">
+    <div class="num">02 · Pesquisa</div>
+    <h2>Duas pessoas, duas dores diferentes</h2>
+    <p>4 entrevistas reais com jogadores de airsoft — Marcos e Luís (veteranos), Antony e Bruno (ainda não tinham conseguido jogar) — formaram duas personas, cada uma apoiada em falas reais, não em suposição.</p>
+
+    <div class="persona-grid">
+      <div class="persona-card">
+        <div class="name">Rafael, 24 — o Aspirante</div>
+        <div class="desc">Quer jogar airsoft, mas nunca conseguiu participar de uma partida.</div>
+        <div class="pain"><strong>Dor:</strong> não sabe com quem falar pra entrar num grupo, nem se vai ser bem recebido.</div>
+        <div class="quote">"Não sabia exatamente com quem falar." — Antony<br>"Fiquei meio perdido no começo." — Bruno</div>
+      </div>
+      <div class="persona-card">
+        <div class="name">Eduardo, 26 — o Veterano</div>
+        <div class="desc">Joga há 4 anos, em vários grupos de WhatsApp ao mesmo tempo.</div>
+        <div class="pain"><strong>Dor:</strong> perde informação importante no volume de mensagens dos grupos.</div>
+        <div class="quote">"A mensagem acabou ficando no meio de várias outras. Só vi depois que alguém comentou de novo." — Marcos</div>
+      </div>
+    </div>
+
+    <div class="callout" style="border-left-color:#8a8a92; background:var(--surface)">
+      <strong>Sobre o Carlos (organizador):</strong> diferente de Rafael e Eduardo, ele não veio de uma rodada de entrevista de descoberta dedicada — a perspectiva do organizador entrou no projeto através dos fluxos de criação de partida e, principalmente, validada diretamente no teste de usabilidade (Breno e Pedro representaram esse papel). É uma lacuna real do processo, registrada aqui em vez de disfarçada com uma persona que não tem entrevista por trás.
+    </div>
+
+    <div class="callout dashed">
+      <span class="label">Achado que não estava em nenhuma hipótese</span>
+      Metade das pessoas entrevistadas, tentando falar sobre "marcar partidas", ainda não tinha conseguido jogar <strong>nenhuma vez</strong>. Isso elevou a barreira de entrada de "acompanhar quem já joga" pra "travar antes mesmo da primeira partida" — maior do que qualquer hipótese inicial previa.
+    </div>
+
+    <p style="max-width:680px"><strong>A tensão mais reveladora do mapa de afinidade:</strong> veteranos diziam que bastava perguntar, que o grupo respondia numa boa. Aspirantes diziam que nunca chegaram a perguntar — não sabiam a quem recorrer. O grupo não era hostil; faltava um caminho visível pra dar o primeiro passo. Essa leitura mudou a direção da solução: não era "deixar o grupo mais receptivo", era "criar um jeito claro de iniciar a conversa".</p>
+  </div>
+
+  <!-- 03 Processo -->
+  <div class="case-section">
+    <div class="num">03 · Processo</div>
+    <h2>Sete etapas, um entregável por vez</h2>
+    <p>Nenhuma etapa avançou sem o entregável da anterior na mão — inclusive quando isso significou refazer uma hipótese três vezes antes dela parar de esconder uma solução dentro.</p>
+
+    <div class="timeline">
+      <div class="row"><div class="n">01</div><div><div class="title">Descoberta</div><div class="sub">Enquadrar o problema sem citar solução; separar fato de achismo</div></div><div class="date">21/09/2026</div></div>
+      <div class="row"><div class="n">02</div><div><div class="title">Pesquisa com usuários</div><div class="sub">4 entrevistas reais, mapa de afinidade, 2 personas, mapa de empatia</div></div><div class="date">22/09/2026</div></div>
+      <div class="row"><div class="n">03</div><div><div class="title">Definição</div><div class="sub">Priorização, JTBD, 5 How Might We, corte de escopo (v1 / fase 2 / fora)</div></div><div class="date">24/09/2026</div></div>
+      <div class="row"><div class="n">04</div><div><div class="title">Arquitetura e fluxos</div><div class="sub">Sitemap do v1, fluxo do jogador e do organizador, com caminhos de erro</div></div><div class="date">08/10/2026</div></div>
+      <div class="row"><div class="n">05</div><div><div class="title">Wireframes</div><div class="sub">4 telas do v1, em baixa/média fidelidade — "aluguel no campo" cortado</div></div><div class="date">08/10/2026</div></div>
+      <div class="row"><div class="n">06</div><div><div class="title">UI e design system</div><div class="sub">Paleta com contraste calculado (WCAG), tipografia, 4 telas em alta fidelidade</div></div><div class="date">21/10/2026</div></div>
+      <div class="row"><div class="n active">07</div><div><div class="title">Teste de usabilidade</div><div class="sub">2 rodadas, 5 participantes reais, achados priorizados, telas corrigidas</div></div><div class="date">21–22/10/2026</div></div>
+    </div>
+  </div>
+
+  <!-- 04 Decisões -->
+  <div class="case-section">
+    <div class="num">04 · Decisões</div>
+    <h2>Três decisões que valem o porquê, não só o resultado</h2>
+
+    <div class="decision-card">
+      <div class="title">Pagamento e chat completo ficaram fora do v1</div>
+      <div class="body">Pagamento envolve dinheiro de terceiros e regra de reembolso quando a partida cancela — por chuva, por exemplo. E um chat dentro do app competiria com o WhatsApp exatamente no que ele já faz bem. As duas ideias foram cortadas do v1 com justificativa presa a risco, não a "dar mais trabalho" — critério que se repetiu em cada corte de escopo posterior (ex.: "aluguel no campo" removido duas vezes por implicar reserva de estoque e, provavelmente, pagamento).</div>
+    </div>
+
+    <div class="decision-card">
+      <div class="title">A paleta de cor foi validada por contraste, não por gosto</div>
+      <div class="body">O laranja escolhido como ação primária (#E58A24) falha o teste de contraste WCAG com texto branco por cima (2,6:1) — mas passa com folga com texto escuro (8,0:1). Verde e vermelho fazem o caminho inverso: pedem texto branco, não escuro. Não existe uma regra fixa de "fundo escuro = texto claro" que vale pra qualquer cor — cada combinação foi calculada, não assumida.</div>
+      <div class="swatches">
+        <div class="swatch" style="background:#E58A24; color:#1A1A1A">#E58A24 · texto escuro · 8,0:1</div>
+        <div class="swatch" style="background:#556B2F; color:#fff">#556B2F · texto branco · 5,95:1</div>
+        <div class="swatch" style="background:#B84036; color:#fff">#B84036 · texto branco · 5,49:1</div>
+      </div>
+    </div>
+
+    <div class="decision-card">
+      <div class="title">O fluxo de "cancelar partida" mudou de ideia em público, de propósito</div>
+      <div class="body">O cancelamento de uma partida pelo organizador ficou sem fluxo desenhado até a Etapa 06 — um buraco identificado, não escondido, e resolvido só na iteração pós-trilha, com confirmação de fricção e aviso ao organizador registrado como pendente de notificação. Depois ele foi renomeado pra "excluir partida" e, na mesma sessão, revertido de volta pra "cancelar" — mantendo o selo "Cancelada" persistido em vez de remover a partida de verdade. Registro essa reviravolta porque é o processo de verdade: nem toda decisão final é a primeira, e uma segunda troca de ideia não é indecisão, é o mesmo rigor de "antes de aplicar, pergunte o porquê" virado pra dentro.</div>
+    </div>
+  </div>
+
+  <!-- 05 Teste rodada 1 -->
+  <div class="case-section">
+    <div class="num">05 · Teste, rodada 1</div>
+    <h2>O protótipo encontra gente de verdade</h2>
+    <p>3 tarefas, cada uma com cenário, instrução e critério de sucesso verificável — cobrindo os 3 papéis (Rafael/aspirante, Carlos/organizador, Eduardo/veterano). Aplicadas com <strong>Antônio</strong> (representando Rafael) e <strong>Breno</strong> (representando Carlos).</p>
+
+    <div class="callout warn">
+      A primeira tentativa de "teste" não envolveu ninguém real — era uma simulação bem escrita de como as personas provavelmente reagiriam. O sinal que denunciou isso: <strong>100% de sucesso em todos os critérios</strong>, algo raro num teste de verdade. Foi descartada e refeita com participantes reais, cada um anotado em tempo real, não reconstruído de memória.
+    </div>
+
+    <div class="finding"><div class="dot dot-high"></div><div class="text"><strong>Valor duplicado na tela da partida</strong> — notado por Antônio e Breno, de forma independente. Dois de dois convergindo sem combinar é sinal, não coincidência.</div></div>
+    <div class="finding"><div class="dot dot-high"></div><div class="text"><strong>Luvas e proteção facial deveriam ser obrigatórias, não recomendadas</strong> — Breno, durante exploração livre da tela de Equipamentos. Só 1 de 2 participantes comentou, mas a severidade ficou Alta mesmo assim: segurança física não depende de frequência pra pesar.</div></div>
+    <div class="finding"><div class="dot dot-low"></div><div class="text">Não ficou claro se o pagamento é pelo app ou presencial, nem o que acontece se alguém quebra uma regra — Antônio. Os dois viraram microcopy, não tela nova.</div></div>
+    <div class="finding"><div class="dot dot-low"></div><div class="text">A tela de partidas não tinha atalho pra Equipamentos, mesmo a página da partida já linkando pra lá — Breno. Achado de navegação, não de feature.</div></div>
+
+    <div class="applied-box" style="margin-top:16px"><strong>Aplicado no protótipo:</strong> luvas e proteção facial passaram pra "Obrigatórios"; valor duplicado removido; microcopy de pagamento ("Pagamentos são acordados com o organizador") e de consequência de regra escritas e aplicadas; link de Equipamentos adicionado em Criar partida.</div>
+  </div>
+
+  <!-- 06 Teste rodada 2 -->
+  <div class="case-section">
+    <div class="num">06 · Teste, rodada 2</div>
+    <h2>Fechando o ciclo: achou, decidiu, mudou, testou de novo</h2>
+    <p>Com 3 participantes novos — <strong>André</strong> (Rafael), <strong>Gustavo</strong> (Eduardo), <strong>Pedro</strong> (Carlos) — as duas correções da rodada 1 foram confirmadas: nenhum dos três teve a dúvida de pagamento ou de consequência de regra que motivou as frases. E apareceram achados novos.</p>
+
+    <div class="callout good">
+      <strong>O achado mais importante desta rodada não foi um achado novo — foi um achado repetido.</strong> "Regras adicionais" difícil de achar em Criar partida já tinha aparecido com o Breno na rodada 1; o Pedro bateu na mesma coisa aqui. Duas pessoas, dois testes independentes, mesmo ponto — isso é um sinal mais forte que qualquer achado isolado, mesmo com frequência baixa dentro de uma única rodada.
+    </div>
+
+    <div class="finding"><div class="dot dot-high"></div><div class="text"><strong>Link "Regras da partida" não levava a lugar nenhum</strong> — já era achado do Breno na rodada 1; os 3 de 3 participantes desta rodada bateram nele. Frequência subiu de 1 pra 3 — prioridade subiu junto.</div></div>
+    <div class="finding"><div class="dot dot-high"></div><div class="text"><strong>Cancelar presença não avisava o organizador</strong> — confirmado dos dois lados (quem cancela e quem organiza). Envolve dinheiro e compromisso, não só estética.</div></div>
+    <div class="finding"><div class="dot dot-low"></div><div class="text">Confusão sobre como os times ficam equilibrados quando o número de vagas é ímpar; rótulo "Pendente" não ficou claro pra todo mundo; terceiro pedido espontâneo de aluguel de equipamento no campo (já era demanda desde a Etapa 05).</div></div>
+
+    <div class="applied-box" style="margin-top:16px"><strong>Desenhado e aplicado:</strong> tela nova "Regras da partida" (as regras padrão escolhidas na criação + regras adicionais do organizador + a microcopy de consequência, que mudou de lugar da tela principal pra cá); confirmação de fricção ao cancelar presença, avisando que o organizador será notificado; fix do link de "regras adicionais".</div>
+
+    <div class="callout dashed">
+      <span class="label">Decisão consciente, não um passo pulado</span>
+      As duas telas novas desta rodada (Regras da partida, confirmação de cancelamento) nunca passaram por um teste com usuário real — foram direto pro case. Essa foi uma escolha deliberada, não um atalho disfarçado: nem todo ciclo de iteração de portfólio exige uma nova rodada de teste pra cada mudança, principalmente com tempo limitado. A diferença importante é que essas duas telas são registradas aqui como <strong>decisão de design não validada</strong>, não como achado confirmado — a mesma honestidade que separou fato de achismo lá na Etapa 01 se aplica também ao que ainda não foi testado.
+    </div>
+  </div>
+
+  <!-- 07 Sistema -->
+  <div class="case-section">
+    <div class="num">07 · Sistema</div>
+    <h2>Um sistema pequeno, documentado antes do portfólio — não inventado pra ele</h2>
+    <p>Cor, tipografia, raio e os 9 componentes reutilizáveis não são um sistema novo criado pra parecer "pronto" — são o que já estava em uso nas 5 primeiras telas, documentado com nome e regra depois do fato, pra qualquer tela nova (login, perfil, regras) usar só o que já existe.</p>
+    <a class="btn-outline" href="https://claude.ai/artifact/XpiksCYyjyxGaLkRoDVjym" target="_blank" rel="noopener">
+      Ver o design system e o protótipo completo
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg>
+    </a>
+    <p style="font-size:14px">A identidade — nome "Arena Airsoft" e o ícone de mira — veio depois, testando (e descartando) três referências visuais mais detalhadas antes de chegar numa silhueta geométrica simples o bastante pra continuar legível em 40px.</p>
+  </div>
+
+  <!-- 08 Protótipo final -->
+  <div class="case-section">
+    <div class="num">08 · Resultado</div>
+    <h2>O protótipo, de ponta a ponta</h2>
+    <p>11 telas navegáveis, do login até a gestão de uma partida pelo organizador. O protótipo completo e navegável está no link acima.</p>
+    <div class="screens-grid">
+      <span>Login / Cadastro</span>
+      <span>Lista de partidas</span>
+      <span>Página da partida</span>
+      <span>Criar partida</span>
+      <span>Equipamentos</span>
+      <span>Regras da partida</span>
+      <span>Perfil</span>
+      <span>Alugar equipamento</span>
+      <span>Recuperar senha</span>
+    </div>
+  </div>
+
+  <!-- 09 Honestidade -->
+  <div class="case-section case-footer">
+    <div class="num">09 · Honestidade</div>
+    <h2>O que esse protótipo não é</h2>
+    <p>Sem isso, o case venderia mais do que o trabalho entrega:</p>
+    <ul style="max-width:680px; font-size:14px; line-height:1.6; color:var(--text-muted); padding-left:20px">
+      <li>Não há backend real — login, sessão e tipo de conta (jogador/organizador) são simulados por uma propriedade fixa da tela, não por autenticação de verdade.</li>
+      <li>Cancelar uma partida marca a tela como cancelada, mas não remove a partida da lista — é fidelidade de protótipo, não comportamento de produto.</li>
+      <li>Duas telas (Regras da partida, confirmação de cancelamento) nunca foram testadas com usuário real — ver seção 06.</li>
+    </ul>
+    <p>Achados em aberto, registrados e não esquecidos: clareza do rótulo "Pendente"; confusão com número de vagas ímpar; quem tem permissão pra criar partidas; e aluguel de equipamento — que já apareceu 3 vezes de forma independente e provavelmente merece virar funcionalidade real numa fase 2, não só uma nota de rodapé.</p>
+
+    <div class="learned-box">
+      <div class="label">O que eu aprendi</div>
+      <p>Quando pensei em começar este projeto, quis fazer algo que, de certa forma, colocasse em prática os estudos de UX/UI Design. Para isso, busquei um processo de mentoria estruturado. Algo que achei um pouco difícil foi parar de trazer uma solução e focar no problema — foi a partir daí que entendi como funciona toda a parte de pesquisa com usuários: as entrevistas e o que escolher como prioridade. Em um próximo projeto, já sei como começar.</p>
+      <p class="note">Observação: as entrevistas e os testes de usabilidade foram feitos com pessoas reais; as personas, a pesquisa inicial e as decisões de negócio foram construídas por mim ao longo do processo de aprendizado — não é um projeto real de mercado.</p>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
